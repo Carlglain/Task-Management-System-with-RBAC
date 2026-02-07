@@ -11,7 +11,8 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-  await app.listen(process.env.PORT ?? 2010);
+  const port = process.env.PORT || 2010;
+  await app.listen(port);
   console.log('server is running on 2010');
 }
 bootstrap();
