@@ -25,7 +25,7 @@ import { TaskModule } from './tasks/task.module';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       entities: [User, Task],
-      // synchronize: true,
+      synchronize: true,
       ssl: {
         rejectUnauthorized: false,
       },
