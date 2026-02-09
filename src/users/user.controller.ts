@@ -26,8 +26,8 @@ export class UserController {
     description: 'User created successfully.',
     type: CreateUserDto,
   })
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(UserRole.ADMIN)
+  // @UseGuards(JwtAuthGuard, RolesGuard)
+  // @Roles(UserRole.ADMIN)
   @Post()
   createUser(@Body() data: CreateUserDto) {
     return this.userService.createUser(data);
